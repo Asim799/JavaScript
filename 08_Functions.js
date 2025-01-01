@@ -40,3 +40,38 @@ function loginUserMessage(username){
 
 console.log(loginUserMessage());//will show undefined
 console.log(loginUserMessage("Asim"));
+
+//Store multiple values in an argument:
+//rest parameter
+//function calculateCartPrice(...num1){
+function calculateCartPrice(val1,val2,...num1) {
+  return num1
+}
+
+console.log(calculateCartPrice(100,200,300,400,500));//returns array of values
+
+//Objects and Functions:
+const user ={
+  username:"Asim",
+  price:999
+}
+
+function handleAnyObject(anyObject){
+  return `Username is ${anyObject.username} and the total price is ${anyObject.price}`;
+}
+//console.log(handleAnyObject(user));
+console.log(handleAnyObject({
+  username:"Asim1",
+  price:1999
+}));
+
+
+//Arrays and Function:
+
+const newArray =[100,200,300,400]
+
+function returnArray(getArray) {
+  return getArray[1]
+}
+
+console.log(returnArray(newArray));
