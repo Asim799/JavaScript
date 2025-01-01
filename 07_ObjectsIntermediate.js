@@ -66,3 +66,34 @@ const users =[
   console.log(Object.entries(JSUser));
   console.log(Object.hasOwnProperty('isLoggedIn'));
   
+  
+  //Destructuring Objects:
+  const course ={
+    courseName: "Html from basic to advance",
+    price:"1999/-",
+    courseInstructor:"Asim"
+  }
+  
+  const {courseInstructor:instructor} = course;
+  
+//  console.log(courseInstructor);
+  console.log(instructor);
+  
+  
+//JSON - JavaScript Object Notation: Used in API's (Application Programming Interface)
+//JSON can be as Object or Array:
+//Example of Object as Json:
+{
+  "courseName":"HTML basic to advance",
+  "price":1999,
+  "courseInstructor":"Asim"
+}
+
+//Example of Array as JSON, Note: there can be multiple objects in array:
+
+[
+  {},
+  {},
+  {}
+  ]
+  
