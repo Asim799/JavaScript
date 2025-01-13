@@ -1,0 +1,58 @@
+<html lang="en">
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Dom Manipulation in JavaScript</title>
+  <script src="https://cdn.jsdelivr.net/npm/eruda"></script>
+<script>eruda.init();</script>
+</head>
+
+<body style="background-color:#212121;color:white;padding:10px">
+  <div class="parent">
+    <div class="day">Monday</div>
+    <div class="day">Tuesday</div>
+    <div class="day">Wednesday</div>
+    <div class="day">Thursday</div>
+  </div>
+  <script type="text/javascript" charset="utf-8">
+    
+    //select an element using class or id
+  const parent= document.querySelector(".parent")
+  console.log(parent)
+  //We can access the children as well by
+  console.log(parent.children)
+  console.log(parent.children[0])
+  //For loop to access all the child element i.e with class = "day"
+  for(let i=0;i<parent.children.length;i++){
+    console.log(parent.children[i].innerHTML)
+  }
+  //Styling the children
+  parent.children[1].style.color="green"
+ parent.children[2].style.backgroundColor='violet'
+ parent.children[2].style.color='white'
+ parent.children[2].style.padding='10px'
+ parent.children[2].style.borderRadius='10px'
+ parent.children[2].style.margin='10px'
+  // to access the first child of parent element:
+  console.log(parent.firstElementChild)
+  
+  
+  //to access the last element of the parent:
+  console.log(parent.lastElementChild)
+  
+  //From child to parent element:
+  const dayOne = document.querySelector(".day")
+  console.log(dayOne)
+  console.log(dayOne.parentElement)
+  console.log(dayOne.nextElementSibling)
+  console.log(dayOne.nextElementSibling)
+  
+  // To check the no. of child nodes:
+  console.log("NODES:", parent.childNodes)
+  
+  
+  </script>
+</body>
+</html>
