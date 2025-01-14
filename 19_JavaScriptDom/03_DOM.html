@@ -1,53 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <title>DOM Manipulations</title>
-     <script src="https://cdn.jsdelivr.net/npm/eruda"></script>
-<script>eruda.init();</script>
-</head>
-<body>
-  <ul class="language">
-    <li>ReactJs</li>
-  </ul>
+  <head>
+    <title>DOM Manipulations</title>
+    <script src="https://cdn.jsdelivr.net/npm/eruda"></script>
+    <script>
+      eruda.init();
+    </script>
+  </head>
+  <body>
+    <ul class="language">
+      <li>ReactJs</li>
+    </ul>
+  </body>
+  <script type="text/javascript" charset="utf-8">
+    document.body.style.backgroundColor = "#212121";
+    document.body.style.color = "#ffff";
 
-</body>
-<script type="text/javascript" charset="utf-8">
-  document.body.style.backgroundColor="#212121"
-  document.body.style.color="#ffff"
-  
-  //add list item in the current list
-  function addItems(lang){
-    const li = document.createElement('li');
-    li.innerHTML = `${lang}`;
-    document.querySelector('.language').appendChild(li)
-  }
-  addItems('javascript')
-  addItems('java')
-  
-  //Alternative method for optimization to add a new li element
-  const addOpti = (langName) =>{
-    const li = document.createElement('li')
-    li.appendChild(document.createTextNode(langName))
-    document.querySelector('.language').appendChild(li)
-  }
-  addOpti('Python')
-  addOpti('C Programming')
-  
-  //Edit elements
-  const secondLang = document.querySelector('li:nth-child(2)')
-  //change the second li
-  secondLang.innerHTML='CSS'
-  //Alternative method
-  const newLi = document.createElement('li')
-  newLi.textContent = "NodeJs"
-  secondLang.replaceWith(newLi)
-  
-  //Alternative method
-  const firstLang = document.querySelector('li:first-child')
-  firstLang.outerHTML = '<li>MERN Stack</li>'
-  
-  //remove the elements using javascript
-  const lastLang = document.querySelector('li:last-child')
- lastLang.remove()
-</script>
+    //add list item in the current list
+    function addItems(lang) {
+      const li = document.createElement("li");
+      li.innerHTML = `${lang}`;
+      document.querySelector(".language").appendChild(li);
+    }
+    addItems("javascript");
+    addItems("java");
+
+    //Alternative method for optimization to add a new li element
+    const addOpti = (langName) => {
+      const li = document.createElement("li");
+      li.appendChild(document.createTextNode(langName));
+      document.querySelector(".language").appendChild(li);
+    };
+    addOpti("Python");
+    addOpti("C Programming");
+
+    //Edit elements
+    const secondLang = document.querySelector("li:nth-child(2)");
+    //change the second li
+    secondLang.innerHTML = "CSS";
+    //Alternative method
+    const newLi = document.createElement("li");
+    newLi.textContent = "NodeJs";
+    secondLang.replaceWith(newLi);
+
+    //Alternative method
+    const firstLang = document.querySelector("li:first-child");
+    firstLang.outerHTML = "<li>MERN Stack</li>";
+
+    //remove the elements using javascript
+    const lastLang = document.querySelector("li:last-child");
+    lastLang.remove();
+  </script>
 </html>
