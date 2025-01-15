@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Colour Changer</title>
+  <link rel="stylesheet" href="style.css" type="text/css" media="all" />
+<script src="https://cdn.jsdelivr.net/npm/eruda"></script>
+<script>
+  eruda.init();
+</script>
+
+</head>
+<body>
+<div class="navbar">
+<nav>
+<span>Home</span>
+<span>About Us</span>
+<span>Contact Us</span>
+</nav>
+</div>
+<h1 class="heading">Click on the colours below to change the background color of the website</h1>
+<div class="container">
+<div class="box" id="red"></div>
+<div class="box" id="green"></div>
+<div class="box" id="yellow"></div>
+<div class="box" id="blue"></div>
+<div class="box" id="purple"></div>
+</div>
+<div class="colorPick">
+<p>
+or
+</p>
+<label class="label">Choose the color from below button</label>
+<br />
+
+<input type="color" id="colorPicker" />
+</div>
+</body>
+<script src="script.js"></script>
+</html>
