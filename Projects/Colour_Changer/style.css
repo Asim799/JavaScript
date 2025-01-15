@@ -19,10 +19,16 @@ span {
 
 }
 
+.heading {
+  text-align: center;
+}
 
 .container {
+  margin-top: 20px;
   display: flex;
-  gap: 10px;
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
 }
 
 .box {
