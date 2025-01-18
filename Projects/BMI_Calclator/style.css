@@ -1,0 +1,111 @@
+body {
+    background-color: #e0b0ff;
+    color: white;
+}
+.heading {
+    box-shadow: 3px 3px 5px #512888;
+    margin-top: 0px;
+    font-family: Arial;
+    justify-content: center;
+    text-align: center;
+    background-color: #9400d3;
+    padding: 10px;
+    text-shadow: 2px 2px 5px black;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+label {
+    color: #512888;
+    font-family: Arial;
+    font-size: 20px;
+    letter-spacing: 1px;
+    font-weight: bolder;
+}
+
+#height {
+    box-shadow: 3px 3px 5px black;
+    height: 30px;
+    margin-top: 10px;
+    border-radius: 10px;
+    border: 1px solid white;
+    font-family: arial;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 8px;
+}
+
+#weight {
+    padding: 8px;
+    font-family: arial;
+    font-size: 20px;
+    font-weight: bold;
+    box-shadow: 3px 3px 5px black;
+    height: 30px;
+    margin-top: 10px;
+    border-radius: 10px;
+    border: 1px solid white;
+}
+
+button {
+    box-shadow: 2px 2px 5px white;
+    width: 120px;
+    height: 50px;
+    border-radius: 10px;
+    background-color: #32174d;
+    color: white;
+    font-size: 20px;
+}
+
+.guide {
+    box-shadow: 4px 4px 5px #512888;
+    font-family: Arial;
+    text-shadow: 2px 2px 5px black;
+    margin: 25px 30px 10px 30px;
+    padding: 0px 15px 15px 15px;
+    color: white;
+    background-color: #9400d3;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.result {
+    font-weight: bold;
+    box-shadow: 4px 4px 5px #512888;
+    font-family: Arial;
+    text-shadow: 2px 2px 5px black;
+    margin: 25px 30px 10px 30px;
+    color: white;
+    background-color: #9400d3;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#result {
+    margin: 18px 0 5px 0;
+    font-size: 30px;
+}
+
+#line {
+    width: 60vw;
+}
+
+hr {
+    width: 100%;
+    border: 2px solid white;
+}
+.para {
+    font-size: 20px;
+    font-weight: bold;
+}
