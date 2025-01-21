@@ -2,6 +2,5 @@ const clock = document.querySelector("#digital-clock");
 
 setInterval(function () {
     const date = new Date();
-    console.log(date.toLocaleTimeString());
-    clock.innerHTML = date.toLocaleTimeString();
+    clock.innerHTML = date.toLocaleTimeString('en-US',{hour12:true});
 }, 1000);
