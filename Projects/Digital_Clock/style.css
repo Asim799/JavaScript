@@ -11,6 +11,7 @@ body {
     justify-content: center;
     align-items: center;
 }
+
 span {
     font-size: 20px;
     letter-spacing: 18px;
@@ -19,6 +20,7 @@ span {
     font-family: Sans-Serif;
     font-weight: bolder;
 }
+
 .container {
     display: flex;
     justify-content: center;
@@ -34,14 +36,14 @@ span {
 .clock {
     background-color: black;
     border-radius: 10px;
-    height: 20vh;
+    min-height: 20vh;
     width: 100%;
     margin: 5px;
 }
 
 #digital-clock {
     font-family: "digital-7", monospace;
-    height: 100%;
+    height: 20vh;
     display: flex;
     color: red;
     justify-content: center;
@@ -55,5 +57,17 @@ span {
 @media (max-width: 768px) {
     #digital-clock {
         font-size: 15vw; /* Increase font size for mobile screens */
+    }
+}
+
+/* Adjust for larger screens (Desktop) */
+@media (min-width: 769px) {
+    .clock {
+        height: 60vh; 
+        border-radius: 25px;
+    }
+    #digital-clock {
+        height: 60vh;
+        font-size: 14vw; /* Adjust font size for larger screens */
     }
 }
