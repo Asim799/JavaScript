@@ -60,6 +60,7 @@ button {
     background-color: #32174d;
     color: white;
     font-size: 20px;
+    cursor: pointer;
 }
 
 .guide {
