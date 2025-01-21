@@ -24,17 +24,17 @@ span {
     justify-content: center;
     align-items: center;
     background-color: #212121;
-    border-radius: 20px;
+    border-radius: 25px;
     border: 5px solid red;
     padding: 20px;
-    width: 80vw;
-    max-width: 600px;
+    width: 85vw;
+    max-width: 1000px;
 }
 
 .clock {
     background-color: black;
     border-radius: 10px;
-    height: 15vh;
+    height: 20vh;
     width: 100%;
     margin: 5px;
 }
