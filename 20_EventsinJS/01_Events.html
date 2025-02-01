@@ -5,15 +5,34 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta http-equiv="X-UA-Compatible" content="ie=edge" />
         <title>Events in JavaScript</title>
+        <script src="https://cdn.jsdelivr.net/npm/eruda"></script>
+        <script>
+            eruda.init();
+        </script>
         <style type="text/css" media="all">
-            .container {
-                
+            body {
+                background-color: #212121;
+                color: white;
             }
-            .images {
-              display: flex;
+
+            img {
+                display: flex;
                 justify-content: center;
                 align-items: center;
                 flex-direction: row;
+                margin: 20px;
+                border-radius: 10px;
+                box-shadow: 2px 2px 12px grey;
+            }
+            a {
+                font-family: Arial;
+                font-size: 20px;
+                text-decoration: none;
+                color: white;
+                background-color: green;
+                border-radius: 10px;
+                padding: 10px;
+                margin: 20px;
             }
         </style>
     </head>
@@ -66,8 +85,73 @@
                         width="160px"
                     />
                 </li>
-                <li><img src="" alt="" id="" /></li>
+
+                <li id="google">
+                    <a href="https://www.google.com">Google Here</a>
+                </li>
             </ul>
         </div>
     </body>
+    <script type="text/javascript" charset="utf-8">
+        /*document.querySelector("#road").onclick = function () {
+            alert("This is a road!");
+        }; //by this onclick event we cannot do propogation!
+
+        document.querySelector("#boat").addEventListener(
+            "click",
+            function (e) {
+                console.log(e);
+            },
+            false
+        ); */
+
+        //Two types of EventPropagator:
+        //1) Event Bubbler
+        //2) Event Capturer
+
+        //Event Bubbler : inside to outside and last parameter should be false like below example
+
+        //Event Capturing : outside to inside and last parameter should be true like below example
+
+        /*document.querySelector("#images").addEventListener(
+            "click",
+            function (e) {
+                console.log("Clicked inside the ul");
+            },
+            false
+        );
+        document.querySelector("#flower").addEventListener(
+            "click",
+            function (e) {
+                console.log("flower clicked");
+                e.stopPropagation();
+            },
+            false
+        );
+
+        document.querySelector("#google").addEventListener(
+            "click",
+            function (e) {
+                console.log("Google Clicked");
+                e.stopPropagation();
+                e.preventDefault();
+            },
+            true
+        );*/
+
+        document.querySelector("#images").addEventListener(
+            "click",
+            function (e) {
+                console.log(e.target.tagName); //targetting the list
+                if (e.target.tagName === "IMG") {
+                    console.log(e.target.id);
+                    let removeIt = e.target.parentNode;
+                    removeIt.remove();
+                }
+                //To remove the list and image
+                //removeIt.parentNode.removeChild(removeIt)
+            },
+            false
+        );
+    </script>
 </html>
