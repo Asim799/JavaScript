@@ -85,11 +85,25 @@
     };
     console.log(randomColor());
 
-    const changeBackground = document
+    //Setting the background color using start button
+    let setBackground;
+    const startChangingColor = document
       .querySelector("#start")
       .addEventListener("click", function () {
-        const body = document.querySelector("body");
-        body.style.backgroundColor = randomColor();
+        if (!setBackground) {
+          setBackground = setInterval(function () {
+            const body = document.querySelector("body");
+            body.style.backgroundColor = randomColor();
+          }, 1000);
+        }
+      });
+
+    //Stopping the color using stop button
+    const stopChangingColor = document
+      .querySelector("#stop")
+      .addEventListener("click", function () {
+        clearInterval(setBackground);
+        setBackground = null;
       });
   </script>
 </html>
