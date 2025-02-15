@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Promise in JavaScript</title>
+        <script src="https://cdn.jsdelivr.net/npm/eruda"></script>
+        <script>
+            eruda.init();
+        </script>
+    </head>
+    <body>
+        <h1>Promise in JavaScript</h1>
+    </body>
+    <script type="text/javascript" charset="utf-8">
+        //Creating a promise:
+        //syntax: new Promise(callBack function(resolve,reject){ Async tasks to be completed})
+        const promiseOne = new Promise(function (resolve, reject) {
+            setTimeout(function () {
+                console.log("Task has been completed!");
+                resolve();
+            }, 1000);
+        });
+
+        promiseOne.then(function () {
+            console.log("Promise completed!");
+        });
+
+        //defining second promise without holding into a variable:
+
+        new Promise(function (resolve, reject) {
+            setTimeout(function () {
+                console.log("Async Task 2 ");
+                resolve();
+            }, 2000);
+        }).then(function () {
+            console.log("Asyn task 2 completed!");
+        });
+
+        //creating third promise with an user Object in resolve
+
+        const promiseThree = new Promise(function (resolve, reject) {
+            setTimeout(function () {
+                resolve({
+                    username: "codeByte",
+                    email: "codebyte@gmail.com"
+                });
+            }, 3000);
+        });
+
+        promiseThree.then(function (user) {
+            console.log(user);
+        });
+
+        const promiseFour = new Promise(function (resolve, reject) {
+          
+        });
+    </script>
+</html>
