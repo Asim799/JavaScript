@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Document</title>
+        <script src="https://cdn.jsdelivr.net/npm/eruda"></script>
+        <script>
+            eruda.init();
+        </script>
+    </head>
+    <body>
+        <h1>OOPS in JavaScript</h1>
+    </body>
+    <script type="text/javascript" charset="utf-8">
+        //OBJECT LITERALS:
+        const user = {
+            username: "Asim",
+            loginCount: 10,
+            signedIn: true,
+            getUserDetails: function () {
+                console.log(`Username is: ${this.username}`);
+                //console.log("User details has been fetched from the database!");
+
+                //To get the current context of the user:
+                console.log(this);
+            }
+        };
+
+        console.log(user.username);
+        console.log(user.getUserDetails());
+
+        //CONSTRUCTOR FUNCTION:
+
+        function User(username, loginCount, isLoggedIn) {
+            this.username = username;
+            this.loginCount = loginCount;
+            this.isLoggedIn = isLoggedIn;
+            this.greeting = function () {
+                console.log(`Welcome ${this.username}`);
+            };
+
+            return this;
+            //return this is implicitly defined hence it is optional to use!
+        }
+        // always use new keyword for new user otherwise the values will get overwrite
+        const userOne = new User("Asim", 10, true);
+        const userTwo = new User("codeByte", 12, false);
+
+        console.log(userOne.constructor);
+        console.log(userTwo);
+    </script>
+</html>
