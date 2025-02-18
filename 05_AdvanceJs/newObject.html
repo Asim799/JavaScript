@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Prototype</title>
+        <script src="https://cdn.jsdelivr.net/npm/eruda"></script>
+        <script>
+            eruda.init();
+        </script>
+    </head>
+    <body>
+        <h1>Prototype in JavaScript</h1>
+    </body>
+    <script type="text/javascript" charset="utf-8">
+        const multipleOf5 = num => {
+            return num * 5;
+        };
+        multipleOf5.power = 2;
+        console.log(multipleOf5(5));
+        console.log(multipleOf5.power);
+        console.log(multipleOf5.prototype);
+
+        function createUser(username, price) {
+            this.username = username;
+            this.price = price;
+        }
+
+        createUser.prototype.increment = function () {
+            this.price++;
+        };
+        createUser.prototype.printPrice = function () {
+            console.log(`Price is: ${this.price}`);
+        };
+        const course1 = new createUser("course1", 2000);
+        const course2 = new createUser("course2", 2500);
+        course2.printPrice()
+    </script>
+</html>
