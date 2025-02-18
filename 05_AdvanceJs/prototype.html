@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Prototype in JavaScript</title>
+  </head>
+  <body>
+    <h1>Prototype in JavaScript</h1>
+  </body>
+  <script>
+    // let myName = "Asim      ";
+    // let myChannel = "codeByte      ";
+    // console.log(myName.trueLength);
+
+    let myHeroes = ["Thor", "Spiderman"];
+
+    let heroPower = {
+      Thor: "Hammer",
+      Spiderman: "Sling",
+      getSpiderPower: function () {
+        console.log(`Spidy power is ${this.Spiderman}`);
+      },
+    };
+
+    //How to create own methods for objects:
+
+    Object.prototype.asim = function () {
+      console.log("Asim is now present in all objects");
+    };
+
+    //heroPower.asim();
+    myHeroes.asim();
+
+    //creating own method in array
+
+    Array.prototype.codebyte = function () {
+      console.log("Subscribe to our channel!!");
+    };
+
+    myHeroes.codebyte();
+    //heroPower.codebyte();
+
+    //Inheritence:
+
+    const User = {
+      name: "codebyte",
+      email: "codebyte@gmail.com",
+    };
+
+    const Teacher = {
+      makeVideo: true,
+    };
+
+    const TeachingSupport = {
+      isAvailable: false,
+    };
+
+    const TASupport = {
+      makeAssignment: "Html Assignment",
+      fullTime: true,
+      //referring TeachingSupport
+      __proto__: TeachingSupport,
+    };
+
+    Teacher.__proto__ = User;
+
+    //Modern Syntax for Inheritence:
+
+    Object.setPrototypeOf(TeachingSupport, Teacher);
+
+    let anotherUserName = "codeBytebyMR     ";
+    String.prototype.trueLength = function () {
+      console.log(`${this}`);
+      // console.log(`${this.name}`);
+      console.log(`True length is ${this.trim().length}`);
+    };
+
+    anotherUserName.trueLength();
+    "asim".trueLength();
+    "codebyte".trueLength();
+  </script>
+</html>
