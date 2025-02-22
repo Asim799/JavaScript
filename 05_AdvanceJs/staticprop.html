@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Static and Props</title>
+        <script src="https://cdn.jsdelivr.net/npm/eruda"></script>
+        <script>
+            eruda.init();
+        </script>
+    </head>
+    <body>
+        Statics and Props
+    </body>
+    <script type="text/javascript" charset="utf-8">
+        class User {
+            constructor(username) {
+                this.username = username;
+            }
+
+            logMe() {
+                console.log(`Username: ${this.username}`);
+            }
+            //Static is used for accessibility
+            createId() {
+                return Math.floor(100000 + Math.random() * 900000);
+            }
+        }
+        const user1 = new User("Asim");
+        console.log(user1.createId());
+
+        //new Class:
+
+        class Teacher extends User {
+            constructor(username, email) {
+                super(username);
+                this.email = email;
+            }
+        }
+
+        const user2 = new Teacher("codeByte", "codebyte@gmail.com");
+
+        user2.logMe();
+        console.log(user2.createId());
+    </script>
+</html>
