@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Reactjs begins</title>
+        <script src="https://cdn.jsdelivr.net/npm/eruda"></script>
+        <script>
+            eruda.init();
+        </script>
+    </head>
+    <body>
+        <button>Click Me</button>
+    </body>
+    <script type="text/javascript" charset="utf-8">
+        class React {
+            constructor() {
+                this.library = "Reactjs";
+                this.server = "htttps://localhost:3001";
+
+                document
+                    .querySelector("button")
+                    .addEventListener("click", this.handleClick.bind(this));
+            }
+
+            handleClick() {
+                console.log("Button just clicked");
+                console.log(this.server);
+            }
+        }
+
+        const App = new React();
+    </script>
+</html>
